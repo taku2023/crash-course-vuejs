@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest";
+import { EmailAddress } from "./email";
 
 describe("Email", () => {
   it("should not contains character #", () => {
