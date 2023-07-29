@@ -19,7 +19,9 @@
         }
       "
     />
-    <button class="button" :disabled="!enabled">Login</button>
+    <button class="button" :disabled="!enabled" @click.prevent="toHome">
+      Login
+    </button>
   </form>
 </template>
 
@@ -27,6 +29,9 @@
 import { computed, ref } from "vue";
 import EmailAddress from "@/components/EmailAddress.vue";
 import Password from "@/components/Password.vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const form = ref({
   email: "",
@@ -38,6 +43,10 @@ const form = ref({
 const enabled = computed(() => {
   return form.value.emailIsValid && form.value.passwordIsValid;
 });
+
+const toHome = (_: MouseEvent) => {
+  router.push({ name: "home" });
+};
 </script>
 <style scoped>
 .title {
