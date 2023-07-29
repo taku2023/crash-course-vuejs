@@ -1,5 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, test } from "vitest";
+import Login from "@/pages/Login.vue"
 
 describe("Login component", () => {
   test("button is disabled when email is not valid", async () => {
