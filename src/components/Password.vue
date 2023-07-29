@@ -8,10 +8,26 @@
 <script setup lang="ts">
 import { Password } from "@/models/password";
 import { ref, computed } from "vue";
-const password = ref<string>("");
+
+const props = defineProps({
+  password: {
+    type: String,
+    required: true,
+  },
+});
+
+const emits = defineEmits<{
+  "update:password": [password: string];
+  "update:validate": [isValid: boolean];
+}>();
+
+const password = ref<string>(props.password);
 
 const valid = computed(() => {
-  return new Password(password.value);
+  const isValid = new Password(password.value).isValid;
+  emits("update:password", password.value);
+  emits("update:validate", isValid);
+  return isValid;
 });
 </script>
 

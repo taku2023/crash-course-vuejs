@@ -6,10 +6,26 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { EmailAddress } from "@/models/email";
-const email = ref<string>("");
+
+const props = defineProps({
+  email: {
+    type: String,
+    required: true,
+  },
+});
+
+const email = ref<string>(props.email);
+
+const emits = defineEmits<{
+  "update:email": [email: string];
+  "update:validate": [isValid: boolean];
+}>();
 
 const valid = computed(() => {
-  return new EmailAddress(email.value).isValid;
+  const isValid = new EmailAddress(email.value).isValid;
+  emits("update:email", email.value);
+  emits("update:validate", isValid);
+  return isValid;
 });
 </script>
 
