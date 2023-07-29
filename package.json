@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint --ext .ts,.vue src && stylelint **/*.vue **/*.css"
+    "lint": "eslint --ext .ts,.vue src && stylelint **/*.vue **/*.css",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "vitest": "^0.33.0",
@@ -17,6 +18,7 @@
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/test-utils": "^2.4.1",
+    "cypress": "^12.17.2",
     "jsdom": "^22.1.0",
     "prettier": "^3.0.0",
     "stylelint": "^15.10.2",
