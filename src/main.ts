@@ -1,16 +1,16 @@
 import * as Vue from "vue";
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Login from "@/pages/Login.vue";
 import Home from "@/pages/Home.vue";
 import "./style.css";
 import App from "@/App.vue";
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",
-      redirect: { path: "/home" },
+      redirect: { name: "login" },
     },
     {
       path: "/home",
@@ -19,6 +19,7 @@ const router = createRouter({
     },
     {
       path: "/login",
+      name: "login",
       component: Login,
     },
   ],
