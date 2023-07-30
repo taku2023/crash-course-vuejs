@@ -1,6 +1,6 @@
 <template>
   <label class="is-error" v-show="!valid">contains only alphabet</label>
-  <input v-model="email" placeholder="youremail@gmail.com" type="email" />
+  <input v-model="email" placeholder="your@gmail.com" type="email" />
 </template>
 
 <script setup lang="ts">

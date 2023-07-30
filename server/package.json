@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "login api server for crash-course-vuejs",
+  "main": "server.js",
+  "scripts": {
+    "serve": "node server.js"
+  },
+  "author": "t.mori",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
