@@ -1,6 +1,14 @@
 <template>
-  <label class="is-error" v-show="!valid">contains only alphabet</label>
-  <input v-model="email" placeholder="your@gmail.com" type="email" />
+  <div>
+    <label class="is-text-left">email</label>
+    <input
+      v-model="email"
+      placeholder="your@gmail.com"
+      type="email"
+      class="input"
+    />
+    <label class="is-error" v-show="!valid">contains only alphabet</label>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -28,9 +36,3 @@ const valid = computed(() => {
   return isValid;
 });
 </script>
-
-<style scoped>
-.is-error {
-  color: red;
-}
-</style>

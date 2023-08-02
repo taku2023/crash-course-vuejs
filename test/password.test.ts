@@ -7,7 +7,7 @@ describe("Password component", () => {
     const wrapper = mount(Password);
     const input = wrapper.find("input[type='password']");
     await input.setValue("sh0rt");
-    expect(wrapper.find("label").text()).toBe(
+    expect(wrapper.find("label.is-error").text()).toBe(
       "contains alphabets and digits, 6 or more characters"
     );
   });
@@ -16,6 +16,6 @@ describe("Password component", () => {
     const wrapper = mount(Password);
     const input = wrapper.find("input[type='password']");
     await input.setValue("longpassw0rd");
-    expect(wrapper.find("label").isVisible()).toBeFalsy();
+    expect(wrapper.find("label.is-error").isVisible()).toBeFalsy();
   });
 });

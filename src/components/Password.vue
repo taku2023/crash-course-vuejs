@@ -1,8 +1,11 @@
 <template>
-  <label class="is-error" v-show="!valid"
-    >contains alphabets and digits, 6 or more characters</label
-  >
-  <input type="password" v-model="password" />
+  <div>
+    <label class="is-text-left">password</label>
+    <input type="password" v-model="password" class="input" />
+    <label class="is-error is-text-left" v-show="!valid"
+      >contains alphabets and digits, 6 or more characters</label
+    >
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -30,9 +33,3 @@ const valid = computed(() => {
   return isValid;
 });
 </script>
-
-<style scoped>
-.is-error {
-  color: red;
-}
-</style>
