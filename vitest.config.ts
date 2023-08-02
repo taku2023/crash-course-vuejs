@@ -8,7 +8,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    exclude: ["./cypress/**/*.js"],
+    exclude: ["./cypress/**/*.js", "./node_modules"],
   },
   resolve: {
     alias: {
