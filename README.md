@@ -1,6 +1,6 @@
 ## Repository of TDD × Vue 3 crash course
 
-This is a repository of what I explained in my [blog here](https://moritakuaki.com/first-step-view-with-tdd). From first commit to lastest, you can learn how to do TDD hands-on.
+This is a repository of what I explained in my **[blog here](https://moritakuaki.com/blogs/first-step-view-with-tdd)**. From first commit to lastest, you can learn how to do TDD hands-on.
 
 You can learn how to
 
